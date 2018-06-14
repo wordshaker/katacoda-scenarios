@@ -1,0 +1,44 @@
+version: "1.0"
+services:
+
+  graphite:
+    image: graphiteapp/graphite-statsd:1.1.3
+    volumes:
+      - graphite-config:/opt/graphite/conf
+      - graphite-data:/opt/graphite/storage
+      - graphite-logs:/var/log
+      - nginx-config:/etc/nginx
+      - logrotate-config:/etc/logrotate.d
+      - ./statsd/config_udp.js:/opt/statsd/config_udp.js
+    ports:
+      - "3001:80"
+      - "2003-2004"
+      - "2023-2024"
+      - "8125:8125/udp"
+      - "8126:8126"
+    restart: unless-stopped
+  
+  grafana:
+    image: grafana/grafana:5.0.4
+    depends_on:
+      - graphite
+      - postgres
+    volumes:
+      - grafana-config:/etc/grafana
+      - grafana-data:/var/lib/grafana
+      - grafana-logs:/var/log/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_NAME=UNiDAYS@Tech
+      - GF_DATABASE_URL=postgres://grafana:grafana@postgres:5432/grafana
+    restart: unless-stopped
+
+volumes:
+  grafana-config:
+  grafana-data:
+  grafana-logs:
+  graphite-config:
+  graphite-data:
+  graphite-logs:

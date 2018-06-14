@@ -1,6 +1,6 @@
 {
-  "title": "Hello World Scenario",
-  "description": "Your First Scenario",
+  "title": "Demo - Grafana/Graphite Monitoring",
+  "description": "Setting up Graphite, Carbon, Whisper and Grafana in Docker",
   "difficulty": "beginner",
   "time": "2 minutes",
   "details": {
@@ -14,13 +14,29 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "docker-compose.yml",
+          "target": "~/"
+        }
+      ],
+      "host01": [
+        {
+          "file": "config.yml",
+          "target": "~/"
+        }
+      ]
     }
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n",
+    "showdashboard": true,
+    "dashboards": [{"name": "Display 80", "port": 80}, {"name": "Display 8080", "port": 8080}]
   },
   "backend": {
-    "imageid": "bash"
+    "imageid": "docker"
   }
 }
