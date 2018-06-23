@@ -19,6 +19,10 @@
     {
       "title": "Step 4 - Response API",
       "text": "step4.md"
+    },
+    {
+      "title": "Step 5 - Hit the Response API",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
