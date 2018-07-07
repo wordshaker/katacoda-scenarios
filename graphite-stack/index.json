@@ -17,11 +17,15 @@
       "text": "step3.md"
     },
     {
-      "title": "Step 4 - Response API",
+      "title": "Step 4 - Setting up Grafana",
       "text": "step4.md"
     },
     {
-      "title": "Step 5 - Hit the Response API",
+      "title": "Step 5 - Response API",
+      "text": "step5.md"
+    },
+    {
+      "title": "Step 6 - Hit the Response API",
       "text": "step5.md"
     }],
     "intro": {
