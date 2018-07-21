@@ -1,7 +1,5 @@
 In order to have some statistics displaying in Grafana, we need to use the API.
 
-## Hit the API
-
 You can run the following commands as many times as you wish.
 
 Success codes:

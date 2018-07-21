@@ -1,14 +1,25 @@
+# RED and The Four Golden Signals
 
-Go back to the Grafana tab. 
+So far, we have set up StatsD, Graphite and Grafana, ran an API that returns given responses and now we have come to the point where we need to build our dashboard. 
 
-On the left hand click hover on the `+` symbol and select the option to create a dashboard.
+As we have set up an API that is easy to manipulate the response of, we can demonstrate some useful ways we can monitor the behaviour of API's and why.
 
-The first panel we will add with be a graph. Select the appropriate icon, click on the panel title and select edit.
+RED is discussed in [this blog written by Peter Bourgon](https://peter.bourgon.org/blog/2016/02/07/logging-v-instrumentation.html) is a mnemonic coined by Tom Wilkie. Much like [Brendan's Gregg USE methods for measuring system resources](http://www.brendangregg.com/usemethod.html), RED is suggested as baseline measurements for API's.
 
-Select `graphite as your Data Source`.
+- **R**ate - a count of requests over time
 
-For the first query select `stats` `timers` `response-api` `code` `200` `count`. Ensure that the time scale set at the top is set to the past hour. You should see a count for the amount of times you clicked the Success Code command in the previous step.
+- **E**rror - a count of error over time
 
-For the first query select `stats` `timers` `response-api` `code` `500` `count`. You should see a count for the amount of times you clicked the  command to return Internal Server Errors in the previous step.
+- **D**uration - the time between request and response.
 
-Congratulations! You have made your first graph using the stack!
+These principles are echoed in the [Google Four Golden Signals mentioned in the Distributed Systems chapter of their SRE book](https://landing.google.com/sre/book/chapters/monitoring-distributed-systems.html). 
+
+1. Latency - the time between request and response but with a focus of the difference between successful and erroring requests.
+
+2. Traffic - requests per second. A measure of the load on the API.
+
+3. Errors - same as before, a count of errors.
+
+4. Saturation - measures of the systems utilisation. Is the memory, I/O or CPU reaching capacity for example.
+
+In this next section, we shall build a dashboard reflecting the above principles focusing on the principles that overlap between these two frameworks.

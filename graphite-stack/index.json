@@ -29,12 +29,16 @@
       "text": "step6.md"
     },
     {
-      "title": "Step 7 - Display your initial metrics",
+      "title": "Step 7 - Monitoring an API",
       "text": "step7.md"
     },
     {
-      "title": "Step 8 - Monitoring an API",
+      "title": "Step 8 - Build the dashboard: Part 1",
       "text": "step8.md"
+    },
+    {
+      "title": "Step 9 - Build the dashboard: Part 2",
+      "text": "step9.md"
     }],
     "intro": {
       "text": "intro.md",

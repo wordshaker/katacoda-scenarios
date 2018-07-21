@@ -1,5 +1,5 @@
 
-## Run response api
+## Run the api
 
 The monitoring stack is up and running. What we need is some metrics and stats to display.
 
