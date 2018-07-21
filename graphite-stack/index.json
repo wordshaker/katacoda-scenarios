@@ -31,6 +31,10 @@
     {
       "title": "Step 7 - Display your initial metrics",
       "text": "step7.md"
+    },
+    {
+      "title": "Step 8 - Monitoring an API",
+      "text": "step8.md"
     }],
     "intro": {
       "text": "intro.md",
