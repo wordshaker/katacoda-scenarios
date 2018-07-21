@@ -27,6 +27,10 @@
     {
       "title": "Step 6 - Hit the Response API",
       "text": "step6.md"
+    },
+    {
+      "title": "Step 7 - Display your initial metrics",
+      "text": "step7.md"
     }],
     "intro": {
       "text": "intro.md",
