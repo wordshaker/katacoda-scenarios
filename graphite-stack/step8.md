@@ -10,8 +10,6 @@ Select `graphite as your Data Source`.
 
 First lets display the rate and latency of successful calls. We will put the response times and count of successful calls in the same graph.
 
-For the first query select `stats` `timers` `response-api` `code` `200` `count`.  In the Functions for the same query select `transformNull()` `averageSeries()` `alias(response time)`
-
 The second query would be `stats` `timers` `response-api` `code` `200` `count`.  In the functions for the same query select `transformNull()` `sumSeries()` `alias(count)` `response time
 
 Ensure that the time scale set at the top is set to the past hour. You should see a count for the amount of times you clicked the Success Code command in the previous step.
