@@ -1,7 +1,5 @@
 ## Let's get visualising
 
-Though Graphite does have the functionality for creating visualisations, we will be using [Grafana](https://grafana.com/) 
-
 ## Run Grafana
 
 Now we have the ability to record our metrics, we need to be able to display them in a useful format. This is where Grafana comes in. Grafana is a dashboarding / visualisation UI that can be provided with a variety of data sources.
