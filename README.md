@@ -1,3 +1,8 @@
+<p align="center">
+  <img width="250px" src="/assets/logoNoHandle.png" />
+</p>
+<br/>
+
 # Katacoda Scenarios
 
 These courses have been written using Interactive Katacoda Scenarios.
@@ -27,7 +32,7 @@ Not for production.
 
 ### Links
 
-- [Katacoda course](https://www.katacoda.com/wordshaker/scenarios/graphite-stack)
+- [Grafana/Graphite Katacoda course](https://www.katacoda.com/wordshaker/scenarios/graphite-stack)
 
 
 ---
@@ -38,6 +43,3 @@ Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenar
 
 For examples, visit https://github.com/katacoda/scenario-example
 
----
-
-![logo](./assets/logo.png) 
