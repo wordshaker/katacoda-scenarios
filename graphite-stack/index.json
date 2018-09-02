@@ -2,7 +2,7 @@
   "title": "Demo - Grafana/Graphite Monitoring",
   "description": "Setting up Graphite, Carbon, StatsD and Grafana in Docker",
   "difficulty": "Intermediate",
-  "time": "2 minutes",
+  "time": "15 minutes",
   "details": {
     "steps": [{
       "title": "Step 1 - Network",
