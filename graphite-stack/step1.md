@@ -8,3 +8,5 @@ For the purpose of this exercise we will be using the default from of network - 
 For the purpose of this task enter the following command into the terminal
 
 `docker network create monitoring`{{execute}}
+
+The default of `docker network` creates a bridge network. This enables standalone containers on a single docker host to communicate.

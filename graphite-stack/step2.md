@@ -18,4 +18,22 @@ To run them, enter the following command into the terminal
 
 `docker run -d --name graphite -p 80:80 -p 2003-2004:2003-2004 -p 2023-2024:2023-2024 -p 8125:8125/udp -p 8126:8126 --network monitoring graphiteapp/graphite-statsd`{{execute}}
 
-This is instructing docker to run the image, which ports it should be running on, which network its needs to be on and that it's a UDP connection.
+
+### A break down of the above command
+
+* `docker run -d --name graphite` 
+
+Runs the docker container in detached mode with the name `graphite`. By running in detached mode, the container runs in the background and exits when the root process used to run the container exits.
+
+* `-p 80:80 -p 2003-2004:2003-2004 -p 2023-2024:2023-2024 -p 8125:8125/udp -p 8126:8126`
+
+These are the port mappings. `-p` publishes the ports which maps a container port (right) to a port on the Docker host (left). By default these connections use TCP, but you can instruct UDP to be used using `/udp`. Here, the port the StatsD port uses is set to use UDP. This is the default and advised behaviour for this particular connection.
+
+* `--network monitoring`
+
+The network that the container needs to be a part of.
+
+* `graphiteapp/graphite-statsd`
+
+The image pulled from Docker Hub.
+
