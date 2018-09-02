@@ -27,6 +27,6 @@ Latency is useful in a number of ways:
 
     Again, this suggests that something has gone awry ad that the calls are at risk of timing out. 
 
-The ideal situation is a short latency for both errors (if there are any) and successes, a high success rate and low no not error rate. There are numerous behaviours that can suggest things going wrong in the API just by these few baseline metrics.
+The ideal situation is a short latency for both errors (if there are any) and successes, a high success rate and low error rate. There are numerous behaviours that can suggest things going wrong in the API just by these few baseline metrics.
 
 You can now set up the baseline metrics for measuring the health of your APIs.
